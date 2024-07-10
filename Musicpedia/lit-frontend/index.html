@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/tokens.css">
+    <link rel="stylesheet" href="./styles/page.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <script type="module" src="./tsfiles/dropdown.ts"></script>
+    <script type="module" src="./tsfiles/lightdarkswitch.ts"></script>
+    <script type="module" src="./tsfiles/lists.ts"></script>
+    <script type="module" src="./tsfiles/list-item-list.ts"></script>
+
+    <script>
+      // Wait for the DOM to be fully loaded
+      
+      document.addEventListener('DOMContentLoaded', () => {
+          const toggleSwitch = document.getElementById('switch');        
+          toggleSwitch.addEventListener('click', () => {
+              if(event.target.on) {
+                // Apply dark mode in root
+                document.documentElement.classList.add('dark-mode');
+             } else {
+                // Revert to light mode in root
+                document.documentElement.classList.remove('dark-mode');
+             }
+          });
+      });
+  </script>
+      <script
+      type="module"
+      src="/src/views/landing.ts"></script>
+    
+  
+ 
+</head>
+
+<body>
+  <landing-page></landing-page>
+
+
+
+      
+
+
+    
+
+    <footer>
+        <p>&copy; 2024 Josephos</p>
+    </footer>
+</body>
+
+</html>
